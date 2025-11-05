@@ -113,7 +113,7 @@ void Update(AlxWindow* w){
     //}
     for(float t = 0.0f;t<(float)path.points.size;t+=0.005f){
         sPoint2D pos = sSpline_GetSplinePoint(&path,t,1);
-        Draw(pos.x,pos.y,WHITE);
+        Point_Render(WINDOW_STD_ARGS,(Vec2){ pos.x,pos.y },WHITE);
     }
 
     for(int i = 0;i<path.points.size;i++){
